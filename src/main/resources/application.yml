@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: caap-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AlbertCarl/configserver
+          
+server:
+  port: 8888
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8302/eureka # it will be registered to eureka server
+  instance:
+    hostname: localhost
